@@ -47,5 +47,13 @@ module FitbitAPI
       # remove root key from response
       result.values[0]
     end
+
+    def log_food(opts)
+      post("user/#{user_id}/foods/log.json", opts)
+    end
+
+    def food_units
+      get('1/foods/units.json')
+    end
   end
 end
