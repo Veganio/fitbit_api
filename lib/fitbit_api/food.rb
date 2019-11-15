@@ -60,6 +60,10 @@ module FitbitAPI
       get("foods/#{food_id}.json")
     end
 
+    def delete_food(user_id, food_id)
+      delete("user/#{user_id}/foods/#{food_id}.json")
+    end
+
     def food_units
       get('1/foods/units.json')
     end
