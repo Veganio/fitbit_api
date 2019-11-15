@@ -56,6 +56,10 @@ module FitbitAPI
       post("user/#{user_id}/foods.json", opts)
     end
 
+    def get_food(food_id)
+      get("foods/#{food_id}.json")
+    end
+
     def food_units
       get('1/foods/units.json')
     end
