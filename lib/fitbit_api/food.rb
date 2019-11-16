@@ -64,6 +64,10 @@ module FitbitAPI
       delete("user/#{user_id}/foods/#{food_id}.json")
     end
 
+    def delete_food_log(user_id, log_id)
+      delete("user/#{user_id}/foods/log/#{log_id}.json")
+    end
+
     def food_units
       get('1/foods/units.json')
     end
